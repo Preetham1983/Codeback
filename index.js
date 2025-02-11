@@ -17,7 +17,9 @@ const QuestionSchema = new mongoose.Schema({
 });
 
 const Question = mongoose.model("Question", QuestionSchema);
-
+app.get("/",asunc(req,res)=>{
+  res.send("hi preetham");
+}
 app.post("/questions", async (req, res) => {
   const { question, code } = req.body;
   const newQuestion = new Question({ question, code });
